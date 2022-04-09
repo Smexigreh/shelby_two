@@ -132,3 +132,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT_ABS = BASE_DIR / 'abs'
 
 MEDIA_URL_ABS = '/abs/'
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    print('Ты в online')
