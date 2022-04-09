@@ -1,0 +1,30 @@
+{% extends "all_abs/base.html" %}
+
+{% block abs_title %}Русский язык{% endblock %}
+{% block info %}Конспект по Русскому языку{% endblock %}
+
+
+{% block content %}
+    {% if abs_russian_language %}
+          {% for russian_language in abs_russian_language %}
+          <div class="mySlides fade">
+            <div class="numbertext">{{ russian_language.title }} / {{ count }}</div>
+              <a href="{{ russian_language.image.url }}" data-lightbox="test"><img src="{{ russian_language.image.url }}"></a>
+          </div>
+          {% endfor %}
+    {% else %}
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 1</div>
+                <img src="https://cdn-front.kwork.ru/files/portfolio/t3/53/31bfc4af5e899dcb2c005dc2a7ee6c253d0e2405-1585829453.jpg">
+          </div>
+    {% endif %}
+{% endblock %}
+
+
+{% block circles %}
+    <div style="text-align:center">
+          {% for russian_language in abs_russian_language %}
+                <span class="dot" onclick="currentSlide({{ russian_language.title }})"></span>
+          {% endfor %}
+    </div>
+{% endblock %}

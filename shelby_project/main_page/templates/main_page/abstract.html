@@ -1,0 +1,48 @@
+{% extends "main_page/base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+{% load static %}
+{% block link %} {% static 'main_page_css/abstract.css' %} {% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+
+    <div class="info">
+        <h2>Выбери предмет, по которому нужен конспект</h2>
+    </div>
+
+      <div class="content">
+
+        <div class="container cont_one">
+          <ul>
+          <a href="{% url 'english' %}"><li class="one">Английский язык</li></a>
+          <a href="{% url 'math' %}"><li class="one">Математика</li></a>
+          <a href="{% url 'information' %}"><li class="one">Информатика</li></a>
+          <a href="{% url 'social_studies' %}"><li class="one">Обществознание</li></a>
+          </ul>
+        </div>
+
+        <div class="container cont_two">
+          <ul class="ul_two">
+          <a href="{% url 'OBZ' %}"><li class="two">ОБЖ</li></a>
+          <a href="{% url 'OID' %}"><li class="two">ОИД</li> </a>
+          <a href="{% url 'physics' %}"><li class="two">Физика</li></a>
+          <a href="{% url 'chemistry' %}"><li class="two">Химия</li></a>
+          </ul>
+        </div>
+
+        <div class="container cont_tree">
+          <ul class="ul_tree">
+          <a href="{% url 'biology' %}"><li class="tree">Биология</li></a>
+          <a href="{% url 'russian_language' %}"><li class="tree">Русский язык</li></a>
+          <a href="{% url 'literature' %}"><li class="tree">Литература</li></a>
+          <a href="{% url 'history' %}"><li class="tree">История</li></a>
+
+          </ul>
+        </div>
+      </div>
+
+
+{% endblock %}

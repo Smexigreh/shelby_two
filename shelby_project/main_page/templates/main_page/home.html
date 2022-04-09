@@ -1,0 +1,32 @@
+{% extends "main_page/base.html" %}
+
+
+{% block title %}
+{{ title }}
+{% endblock %}
+{% load static %}
+{% block link %} {% static 'main_page_css/home.css' %} {% endblock %}
+
+
+{% block content %}
+
+
+
+    <h1>{{ title }}</h1>
+
+    <div class="content">
+        {% for project in content %}
+          <div class="tree_content">
+            <img src="{{ project.image.url }}" alt="" width="100px" height="100px">
+          </div>
+        {% endfor %}
+    </div>
+
+    {% for i in desc %}
+        <div class="desc">
+          <p>{{ i.description }}</p>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}

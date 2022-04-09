@@ -1,0 +1,30 @@
+{% extends "all_abs/base.html" %}
+
+{% block abs_title %}Литература{% endblock %}
+{% block info %}Конспект по Литературе{% endblock %}
+
+
+{% block content %}
+    {% if abs_literature %}
+          {% for literature in abs_literature %}
+          <div class="mySlides fade">
+            <div class="numbertext">{{ literature.title }} / {{ count }}</div>
+              <a href="{{ literature.image.url }}" data-lightbox="test"><img src="{{ literature.image.url }}"></a>
+          </div>
+          {% endfor %}
+    {% else %}
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 1</div>
+                <img src="https://cdn-front.kwork.ru/files/portfolio/t3/53/31bfc4af5e899dcb2c005dc2a7ee6c253d0e2405-1585829453.jpg">
+          </div>
+    {% endif %}
+{% endblock %}
+
+
+{% block circles %}
+    <div style="text-align:center">
+          {% for literature in abs_literature %}
+                <span class="dot" onclick="currentSlide({{ literature.title }})"></span>
+          {% endfor %}
+    </div>
+{% endblock %}

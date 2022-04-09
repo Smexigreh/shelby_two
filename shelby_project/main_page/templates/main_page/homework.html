@@ -1,0 +1,22 @@
+{% extends "main_page/base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+{% load static %}
+{% block link %} {% static 'main_page_css/homework.css' %} {% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <div class="homework">
+        <div class="logotip">
+            <h2>Домашняя работа которую надо выполнить на {% for d in dat %} {{ d.date }} {% endfor %} </h2>
+        </div>
+
+        <div class="dz">
+            <div class="dz_print">
+               {% for i in dz %}<p> {{ i.title }}</p> {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

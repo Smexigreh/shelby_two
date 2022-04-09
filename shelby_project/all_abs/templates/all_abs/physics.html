@@ -1,0 +1,30 @@
+{% extends "all_abs/base.html" %}
+
+{% block abs_title %}Физика{% endblock %}
+{% block info %}Конспект по Физике{% endblock %}
+
+
+{% block content %}
+    {% if abs_physics %}
+          {% for physics in abs_physics %}
+          <div class="mySlides fade">
+            <div class="numbertext">{{ physics.title }} / {{ count }}</div>
+              <a href="{{ physics.image.url }}" data-lightbox="test"><img src="{{ physics.image.url }}"></a>
+          </div>
+          {% endfor %}
+    {% else %}
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 1</div>
+                <img src="https://cdn-front.kwork.ru/files/portfolio/t3/53/31bfc4af5e899dcb2c005dc2a7ee6c253d0e2405-1585829453.jpg">
+          </div>
+    {% endif %}
+{% endblock %}
+
+
+{% block circles %}
+    <div style="text-align:center">
+          {% for physics in abs_physics %}
+                <span class="dot" onclick="currentSlide({{ physics.title }})"></span>
+          {% endfor %}
+    </div>
+{% endblock %}
