@@ -237,7 +237,7 @@ body {
     .bg-ex-blur p{
       z-index: 2;
       color: Black;
-      font-size: 1.5em;
+      font-size: 1.3em;
       margin-bottom: 20%;
       margin-top: 10%;
       padding-left: 10px;
@@ -246,7 +246,7 @@ body {
     }
 }
 
-@media screen and (min-width: 914px) and (max-width: 1000px) {
+@media screen and (min-width: 600px) and (max-width: 700px) {
     html,
     body {
       margin: 0;
@@ -267,7 +267,7 @@ body {
 
     .bg-ex-blur{
       position: relative;
-      display: flex;
+      display: block;
       justify-content: center;
       align-items: center;
       height: 90%;

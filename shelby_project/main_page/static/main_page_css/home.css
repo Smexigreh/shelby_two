@@ -285,7 +285,7 @@ body {
     }
 }
 
-@media screen and (min-width: 914px) and (max-width: 1000px) {
+@media screen and (min-width: 600px) and (max-width: 700px) {
     html,
     body {
       background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1612777237_20-p-skachat-fon-golubogo-neba-26.jpg'); /* Путь к картинке */

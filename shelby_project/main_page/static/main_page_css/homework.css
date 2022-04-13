@@ -254,6 +254,7 @@ body {
       height: 25%;
       text-align: center;
       margin-left: 5%;
+      margin-bottom: 7%;
     }
 
     .logotip h2 {
@@ -266,7 +267,7 @@ body {
       border: solid 5px Aqua;
       border-radius: 10px;
       width: 85%;
-      height: 50%;
+      height: 60%;
       margin-left: 2%
     }
 
@@ -282,8 +283,8 @@ body {
 }
 
  @media screen
- and (min-width: 914px)
- and (max-device-width : 1000px) {
+ and (min-width: 600px)
+ and (max-device-width : 700px) {
     html,
     body {
       background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1612777237_20-p-skachat-fon-golubogo-neba-26.jpg'); /* Путь к картинке */
@@ -307,7 +308,7 @@ body {
 
     .logotip {
       width: 90%;
-      height: 25%;
+      height: 35%;
       text-align: center;
     }
 
@@ -321,7 +322,7 @@ body {
       border: solid 5px Aqua;
       border-radius: 10px;
       width: 85%;
-      height: 60%;
+      height: 70%;
       margin-left: 2%
     }
 

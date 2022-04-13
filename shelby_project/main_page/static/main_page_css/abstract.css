@@ -294,13 +294,13 @@ a {
     }
 }
 
-@media screen and (min-width: 912px) and (max-width: 1000px) {
+@media screen and (min-width: 600px) and (max-width: 700px) {
   html,
   body {
     background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1612777237_20-p-skachat-fon-golubogo-neba-26.jpg'); /* Путь к картинке */
     margin: 0;
     overflow-x: hidden;
-
+    background-size: 255% 100%;
   }
   .nav {
     width: 35%;
@@ -322,11 +322,12 @@ a {
   }
 
   .container {
-    height: 100%;
+    height: 68%;
     width: 31%;
     float: left;
     margin-bottom: 50px;
-    margin-left: 0px
+    margin-left: 23%;
+    float: none;
   }
 
   .cont_one ul {
@@ -345,8 +346,8 @@ a {
   .cont_one li {
     margin-top: 30px;
     padding: 23px;
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 67px;
+    padding-left: 67px;
     text-align: center;
     border-radius: 15px
   }
@@ -369,8 +370,8 @@ a {
   .cont_two li {
     margin-top: 35px;
     padding: 23px;
-    padding-right: 90px;
-    padding-left: 90px;
+    padding-right: 102px;
+    padding-left: 102px;
     text-align: center;
     border-radius: 15px;
   }
@@ -432,7 +433,7 @@ a {
 
 
   .cont_two {
-    height: 100%;
+    height: 91%;
     float: left;
   }
 
@@ -593,12 +594,12 @@ and (max-device-width : 500px) {
     }
 
    .cont_two {
-    height: 28%;
+    height: 40%;
     float: left;
     }
 
    .cont_tree {
-    height: 34%;
+    height: 44%;
     float: left;
     }
 }

@@ -425,7 +425,7 @@ img {
     }
 }
 
-@media screen and (min-width: 914px) and (max-width: 1000px) {
+@media screen and (min-width: 600px) and (max-width: 700px) {
     html,
     body {
       margin: 0;
