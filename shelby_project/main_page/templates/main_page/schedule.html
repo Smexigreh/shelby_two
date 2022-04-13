@@ -8,29 +8,30 @@
 
 {% block content %}
     <h1>{{ title }}</h1>
-    <div class="logo_all">
 
-      <div class="logo_chet logo {% for i in title_even_week %} {{ i.title_even }} {% endfor %}">
-        <h2>Четная неделя</h2>
-      </div>
+    <div class="all_chet">
+
+        <div class="logo_chet logo {% for i in title_even_week %} {{ i.title_even }} {% endfor %}">
+          <h2>Четная неделя</h2>
+        </div>
+
+        <div class="rasp {% for i in border_even_week %} {{ i.border_even }} {% endfor %}">
+          <img src="https://sun9-71.userapi.com/impf/Ei4RTNoOIrERyv2KUkDw1BQOOBImzTMQ0Fj9dg/OXrkGaTrAus.jpg?size=1298x730&quality=96&sign=8624b977d03e64e64d76be6bb38acdd6&type=album" alt="">
+        </div>
+
+    </div>
+
+    <div class="all_nechet">
 
       <div class="logo_nechet logo {% for i in title_odd_week %} {{ i.title_odd }} {% endfor %}">
         <h2>Нечетная неделя</h2>
       </div>
 
-    </div>
-
-    <div class="Rasp_all">
-
-      <div class="rasp {% for i in border_even_week %} {{ i.border_even }} {% endfor %}">
-        <img src="https://sun9-71.userapi.com/impf/Ei4RTNoOIrERyv2KUkDw1BQOOBImzTMQ0Fj9dg/OXrkGaTrAus.jpg?size=1298x730&quality=96&sign=8624b977d03e64e64d76be6bb38acdd6&type=album" alt="">
-      </div>
-
-      <div class="rasp {% for i in border_odd_week %} {{ i.border_odd }} {% endfor %}">
+      <div class="rasp nechet {% for i in border_odd_week %} {{ i.border_odd }} {% endfor %}">
         <img src="https://sun1-21.userapi.com/impf/b-dEFDdsqC5OPfUUfG5AjJzrqFapJO2oD-EPQw/WR1Bpakctls.jpg?size=1295x729&quality=96&sign=c9432103bd05f039b3633da94491bdfa&type=album" alt="">
       </div>
 
-
     </div>
+
 
 {% endblock %}

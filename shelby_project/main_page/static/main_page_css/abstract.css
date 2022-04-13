@@ -151,6 +151,8 @@
 
 body {
     -webkit-animation: bugfix infinite 1s;
+    background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1612777237_20-p-skachat-fon-golubogo-neba-26.jpg');
+    background-size: 100% 100%;
 }
 
 @-webkit-keyframes bugfix {
@@ -160,13 +162,10 @@ body {
 }
 
 .bg-ex-animation {
-  background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1612777237_20-p-skachat-fon-golubogo-neba-26.jpg');
-  background-size: 100% 100%;
   width: 100%;
   height: 100%;
   filter: blur(0.3px); /* Размытие картинки */
   margin-left: 40px;
-  box-shadow: inset 0 0 0 200vw rgb(170 168 168 / 30%); /* Прозрачность с помощью тени */
 }
 @keyframes animated-bg {
   from { background-position: 0 0; }
@@ -230,6 +229,15 @@ body {
   letter-spacing: 1px;
 }
 
+.ul_two li {
+  margin-top: 30px;
+  padding: 23px;
+  padding-right: 125px;
+  padding-left: 125px;
+  text-align: center;
+  border-radius: 15px
+}
+
 .two:hover {
   transition: 1.5s;
   background-color: #a5ff28
@@ -286,15 +294,312 @@ a {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 912px) and (max-width: 1000px) {
+  html,
+  body {
+    background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1612777237_20-p-skachat-fon-golubogo-neba-26.jpg'); /* Путь к картинке */
+    margin: 0;
+    overflow-x: hidden;
+
+  }
+  .nav {
+    width: 35%;
+    box-shadow: none
+  }
+  .bg-ex-animation h1 {
+    color: DeepSkyBlue;
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 2px rgb(0 0 0 / 50%);
+    font-family: Courier, monospace;
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    opacity: 0.96;
+  }
+
+  .container {
+    height: 100%;
+    width: 31%;
+    float: left;
+    margin-bottom: 50px;
+    margin-left: 0px
+  }
+
+  .cont_one ul {
+    list-style-type: none;
+    float: left;
+    margin-left: 0px;
+    margin-right: 5%
+  }
+
+  .cont_two ul {
+    list-style-type: none;
+    float: left;
+    margin-left: 0px
+  }
+
+  .cont_one li {
+    margin-top: 30px;
+    padding: 23px;
+    padding-right: 60px;
+    padding-left: 60px;
+    text-align: center;
+    border-radius: 15px
+  }
+
+  .cont_tree ul {
+    list-style-type: none;
+    float: left;
+    margin-left: 0px
+  }
+
+  .cont_tree li {
+    margin-top: 30px;
+    padding: 23px;
+    padding-right: 87px;
+    padding-left: 87px;
+    text-align: center;
+    border-radius: 15px;
+  }
+
+  .cont_two li {
+    margin-top: 35px;
+    padding: 23px;
+    padding-right: 90px;
+    padding-left: 90px;
+    text-align: center;
+    border-radius: 15px;
+  }
+
+  .one {
+    background-color: #ffcca6;
+    color: Black;
+    font-family: impact;
+    letter-spacing: 1px
+  }
+
+  .one:hover {
+    transition: 1.5s;
+    background-color: #ff9444
+  }
+
+  .two {
+    background-color: #c5e796;
+    color: Black;
+    font-family: impact;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    padding: 23px;
+    padding-right: 112px;
+    padding-left: 112px;
+    text-align: center;
+    border-radius: 15px
+  }
+
+  .two:hover {
+    transition: 1.5s;
+    background-color: #a5ff28
+  }
+
+
+  .tree {
+    background-color: #b2d7f3;
+    color: Black;
+    font-family: impact;
+    letter-spacing: 1px;
+  }
+
+  .tree:hover {
+    transition: 1.5s;
+    background-color: #1d9dfe
+  }
+
+  .info {
+    text-align: center;
+    margin-right: 10%
+  }
+
+  .info h2 {
+    font-family: arial;
+    color: LawnGreen;
+    text-shadow: 1px 2px 1px rgb(0 0 0 / 50%);
+    margin-left: 20%
+  }
+
+
+  .cont_two {
+    height: 100%;
+    float: left;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+@media screen
+and (min-width: 412px)
+and (max-device-width : 500px) {
     html,
     body {
+      background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1612777237_20-p-skachat-fon-golubogo-neba-26.jpg'); /* Путь к картинке */
       margin: 0;
       overflow-x: hidden;
+      background-size: 215% 100%
     }
     .nav {
-      width: 100%;
+      width: 77%;
       box-shadow: none
+    }
+    .bg-ex-animation h1 {
+      color: DeepSkyBlue;
+      text-align: center;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 2px rgb(0 0 0 / 50%);
+      font-family: Courier, monospace;
+      margin-right: 10%
+    }
+
+    .bg-ex-animation {
+        width: 100%;
+        height: 160%
+    }
+
+    .content {
+      width: 90%;
+      height: auto;
+      margin-top: 10px;
+      opacity: 0.96;
+    }
+
+    .content ul {
+        margin-left: 0px
+    }
+
+    .container {
+      height: 74%;
+      float: unset;
+      margin-left: 0;
+      width: 100%
+    }
+
+    .cont_one {
+      height: 28%
+    }
+
+    .cont_one ul {
+      list-style-type: none;
+      float: left;
+    }
+
+    .cont_two ul {
+      list-style-type: none;
+      float: left;
+    }
+
+    .cont_one li {
+      margin-top: 30px;
+      padding: 23px;
+      padding-right: 75px;
+      padding-left: 75px;
+      text-align: center;
+      border-radius: 15px
+    }
+
+    .cont_two li {
+      margin-top: 30px;
+      padding: 23px;
+      padding-right: 114px;
+      padding-left: 114px;
+      text-align: center;
+      border-radius: 15px
+    }
+
+    .cont_tree ul {
+      list-style-type: none;
+      float: left;
+    }
+
+    .cont_tree li {
+      margin-top: 30px;
+      padding: 23px;
+      padding-right: 93px;
+      padding-left: 93px;
+      text-align: center;
+      border-radius: 15px
+    }
+
+    .one {
+      background-color: #ffcca6;
+      color: Black;
+      font-family: impact;
+      letter-spacing: 1px
+    }
+
+    .one:hover {
+      transition: 1.5s;
+      background-color: #ff9444
+    }
+
+    .two {
+      background-color: #c5e796;
+      color: Black;
+      font-family: impact;
+      letter-spacing: 1px;
+      margin-top: 30px;
+      padding: 23px;
+      padding-right: 112px;
+      padding-left: 112px;
+      text-align: center;
+      border-radius: 15px
+    }
+
+    .two:hover {
+      transition: 1.5s;
+      background-color: #a5ff28
+    }
+
+
+    .tree {
+      background-color: #b2d7f3;
+      color: Black;
+      font-family: impact;
+      letter-spacing: 1px;
+    }
+
+    .tree:hover {
+      transition: 1.5s;
+      background-color: #1d9dfe
+    }
+
+    .info {
+      text-align: center;
+      margin-right: 25%
+    }
+
+    .info h2 {
+      font-family: arial;
+      color: LawnGreen;
+      text-shadow: 1px 2px 1px rgb(0 0 0 / 50%);
+      margin-left: 19%
+    }
+    a {
+      text-decoration: none;
+    }
+
+   .cont_two {
+    height: 28%;
+    float: left;
+    }
+
+   .cont_tree {
+    height: 34%;
+    float: left;
     }
 }
 
