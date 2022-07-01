@@ -1,37 +1,58 @@
 {% extends "main_page/base.html" %}
 
-{% block title %}
-{{ title }}
-{% endblock %}
+{% block title %} {{ title }} {% endblock %}
+
+{% block title_2 %} {{ title }} {% endblock %}
+
 {% load static %}
+
 {% block link %} {% static 'main_page_css/schedule.css' %} {% endblock %}
 
 {% block content %}
-    <h1>{{ title }}</h1>
 
-    <div class="all_chet">
+    <section class="raspisanie mt-2">
+        <div class="container">
+            <div class="row">
 
-        <div class="logo_chet logo {% for i in title_even_week %} {{ i.title_even }} {% endfor %}">
-          <h2>Четная неделя</h2>
+                <div class="col-sm-12 col-xl-6 mb-3 mt-4">
+                    <h3 class="text-center mb-4 {% for i in neonshadow_chet %} {{ i.title_even }} {% endfor %}">Четная неделя</h3>
+                    <button type="button" class="btn text-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="{% static 'img/bs.png' %}" alt="" class="img-fluid {% for i in photo_chet %} {{ i.border_even }} {% endfor %}"></button>
+                </div>
+
+                <div class="col-sm-12 col-xl-6 mt-4">
+                    <h3 class="text-center mb-4 {% for i in neonshadow_nechet %} {{ i.title_odd }} {% endfor %}">Нечетная неделя</h3>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2"><img src="{% static 'img/bs2.png' %}" alt="" class="img-fluid photo {% for i in photo_nechet %} {{ i.border_odd }} {% endfor %}"></button>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-lower redneon text-center mt-5">Телевизор отупляет и убивает много времени. Выключите его, и вы сохраните несколько клеток вашего мозга. Однако будьте осторожны — отупеть можно и за компьютером Apple.</h2>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="rasp {% for i in border_even_week %} {{ i.border_even }} {% endfor %}">
-          <img src="https://sun9-71.userapi.com/impf/Ei4RTNoOIrERyv2KUkDw1BQOOBImzTMQ0Fj9dg/OXrkGaTrAus.jpg?size=1298x730&quality=96&sign=8624b977d03e64e64d76be6bb38acdd6&type=album" alt="">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="{% static 'img/bs.png' %}" alt="" class="img-fluid photo_chet gg">
+          </div>
         </div>
-
+      </div>
     </div>
 
-    <div class="all_nechet">
-
-      <div class="logo_nechet logo {% for i in title_odd_week %} {{ i.title_odd }} {% endfor %}">
-        <h2>Нечетная неделя</h2>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="{% static 'img/bs2.png' %}" alt="" class="img-fluid photo_nechet gg">
+          </div>
+        </div>
       </div>
-
-      <div class="rasp nechet {% for i in border_odd_week %} {{ i.border_odd }} {% endfor %}">
-        <img src="https://sun1-21.userapi.com/impf/b-dEFDdsqC5OPfUUfG5AjJzrqFapJO2oD-EPQw/WR1Bpakctls.jpg?size=1295x729&quality=96&sign=c9432103bd05f039b3633da94491bdfa&type=album" alt="">
-      </div>
-
     </div>
-
 
 {% endblock %}

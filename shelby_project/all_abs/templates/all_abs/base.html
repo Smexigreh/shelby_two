@@ -1,56 +1,88 @@
-<html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block abs_title %}{% endblock %} | Shelby</title>
-    {% load static %}
-    <link rel="icon" href="{% static 'img/Shelby.png' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'all_abs/all.css' %}">
-    <link rel="stylesheet" href="{% static 'dict/css/lightbox.css' %}">
-    <script src="{% static 'all_abs/all.js' %}"></script>
-    <script src="{% static 'dict/js/lightbox-plus-jquery.js' %}"></script>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/experimental-book-arcade.png" type="image/x-icon">
+    {% load static %}
+     <link rel="stylesheet" href="{% static 'all_abs/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'all_abs/konspekts.css' %}">
+    <title>Shelby | {% block abs_title %}{% endblock %}</title>
 </head>
 
 <body>
-    <div class="bg-ex-animation">
-      <h1>{% block info %}{% endblock %}</h1>
-
-              <!-- Slideshow container -->
-        <div class="slideshow-container">
-
-          <!-- Full-width images with number and caption text -->
-            {% block content %}{% endblock %}
-
-          <!-- Next and previous buttons -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-
-        <!-- The dots/circles -->
-        {% block circles %}{% endblock %}
-
-        <div class="P_S">
-          <h3>Сразу хочу сказать конспеты будут выкладываться только актуальные, все конспекты раннее будут просто удаляться</h3>
-        </div>
-
-    </div>
-    <input type="checkbox" id="nav-toggle" hidden="">
-    <nav class="nav">
-        <label for="nav-toggle" class="nav-toggle" onclick=""></label>
-
-        <h2 class="logo">
-            <a href="{% url 'home' %}">Shelby</a>
-        </h2>
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
         <ul>
-            <li><a href="{% url 'home' %}">Главная</a>
-            </li><li><a href="{% url 'schedule' %}">Расписание</a>
-            </li><li><a href="{% url 'abstract' %}">Конспекты</a>
-            </li><li><a href="{% url 'homework' %}">Домашняя работа</a>
-            </li><li><a href="{% url 'about' %}">О сайте</a></li>
+            <li><a href="{% url 'home' %}" class="pop">Главная</a></li>
+            <li><a href="{% url 'about' %}" class="pop_about">О сайте</a></li>
+            <li><a href="{% url 'abstract' %}" class="pop">Конспекты</a></li>
+            <li><a href="{% url 'schedule' %}" class="pop">Расписание</a></li>
+            <li><a href="{% url 'homework' %}" class="pop_dz">Домашняя работа</a></li>
         </ul>
-      </nav>
+    </div>
+
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="text-uppercase text-center mb-5 color1">Конспект по {% block abs_title_2 %}{% endblock %}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <section class="pictures">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-indicators">
+                            {% block slide %}{% endblock %}
+                        </div>
+                        <div class="carousel-inner">
+                            {% block content %}{% endblock %}
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <h1 class="text-center mb-3 redneon">Сразу хочу сказать конспеты будут выкладываться
+                        только актуальные, все конспекты раннее будут просто удаляться, возможно)))</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <hr class="hr_neon">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h6 class="text-uppercase text-center footer_neon">www.Shelby.com</h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'script/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'script/fslightbox.js' %}"></script>
 </body>
+
 </html>

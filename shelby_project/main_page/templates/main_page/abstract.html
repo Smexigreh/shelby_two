@@ -1,48 +1,69 @@
 {% extends "main_page/base.html" %}
 
-{% block title %}
-{{ title }}
-{% endblock %}
+{% block title %} {{ title }} {% endblock %}
+
+{% block title_2 %} {{ title }} {% endblock %}
+
 {% load static %}
-{% block link %} {% static 'main_page_css/abstract.css' %} {% endblock %}
+
+{% block link %} {% static 'main_page_css/astract.css' %} {% endblock %}
 
 {% block content %}
-    <h1>{{ title }}</h1>
 
-    <div class="info">
-        <h2>Выбери предмет, по которому нужен конспект</h2>
-    </div>
+    <section class="konspeck mb-5 pb-4">
+        <div class="container">
+            <div class="row">
 
-      <div class="content">
+                    <div class="col-xl-4 col-md-6 col-sm-12 text-center mb-5">
+                        <a href="{% url 'english' %}" class="text-center del-line"><div class="konsp">Английский язык</div></a>
+                    </div>
 
-        <div class="container cont_one">
-          <ul>
-          <a href="{% url 'english' %}"><li class="one">Английский язык</li></a>
-          <a href="{% url 'math' %}"><li class="one">Математика</li></a>
-          <a href="{% url 'information' %}"><li class="one">Информатика</li></a>
-          <a href="{% url 'social_studies' %}"><li class="one">Обществознание</li></a>
-          </ul>
-        </div>
+                    <div class="col-xl-4 col-md-6 col-sm-12 text-center mb-5">
+                        <a href="{% url 'math' %}" class="text-center del-line"><div class="konsp">Математика</div></a>
+                    </div>
 
-        <div class="container cont_two">
-          <ul class="ul_two">
-          <a href="{% url 'OBZ' %}"><li class="two">ОБЖ</li></a>
-          <a href="{% url 'OID' %}"><li class="two">ОИД</li> </a>
-          <a href="{% url 'physics' %}"><li class="two">Физика</li></a>
-          <a href="{% url 'chemistry' %}"><li class="two">Химия</li></a>
-          </ul>
-        </div>
+                    <div class="col-xl-4 col-md-6 col-sm-12 text-center mb-5">
+                        <a href="{% url 'information' %}" class="text-center del-line"><div class="konsp">Информатика</div></a>
+                    </div>
 
-        <div class="container cont_tree">
-          <ul class="ul_tree">
-          <a href="{% url 'biology' %}"><li class="tree">Биология</li></a>
-          <a href="{% url 'russian_language' %}"><li class="tree">Русский язык</li></a>
-          <a href="{% url 'literature' %}"><li class="tree">Литература</li></a>
-          <a href="{% url 'history' %}"><li class="tree">История</li></a>
+                    <div class="col-xl-4 col-md-6 col-sm-12 text-center mb-5">
+                        <a href="{% url 'social_studies' %}" class="text-center del-line"><div class="konsp">Обществознание</div></a>
+                    </div>
 
-          </ul>
-        </div>
-      </div>
+                    <div class="col-xl-4 col-md-6 col-sm-12 text-center mb-5">
+                        <a href="{% url 'OBZ' %}" class="text-center del-line"><div class="konsp">ОБЖ</div></a>
+                    </div>
 
+                    <div class="col-xl-4 col-md-6 col-sm-12 text-center mb-5">
+                        <a href="{% url 'OID' %}" class="text-center del-line"><div class="konsp">ОИД</div></a>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 col-sm-12 text-center mb-5">
+                        <a href="{% url 'physics' %}" class="text-center del-line"><div class="konsp">Физика</div></a>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 col-sm-12 text-center mb-5">
+                        <a href="{% url 'chemistry' %}" class="text-center del-line"><div class="konsp">Химия</div></a>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 col-sm-12 text-center mb-5">
+                        <a href="{% url 'biology' %}" class="text-center del-line"><div class="konsp">Биология</div></a>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 col-sm-12 text-center mb-5">
+                        <a href="{% url 'russian_language' %}" class="text-center del-line"><div class="konsp">Русский язык</div></a>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 col-sm-12 text-center mb-5">
+                        <a href="{% url 'literature' %}" class="text-center del-line"><div class="konsp">Литература</div></a>
+                    </div>
+
+                    <div class="col-xl-4 col-md-6 col-sm-12 text-center mb-1">
+                        <a href="{% url 'history' %}" class="text-center del-line"><div class="konsp">История</div></a>
+                    </div>
+
+                </div>
+            </div>
+    </section>
 
 {% endblock %}

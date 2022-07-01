@@ -1,30 +1,30 @@
 {% extends "all_abs/base.html" %}
 
 {% block abs_title %}Литература{% endblock %}
-{% block info %}Конспект по Литературе{% endblock %}
-
+{% block abs_title_2 %}Литературе{% endblock %}
 
 {% block content %}
+
     {% if abs_literature %}
-          {% for literature in abs_literature %}
-          <div class="mySlides fade">
-            <div class="numbertext">{{ literature.title }} / {{ count }}</div>
-              <a href="{{ literature.image.url }}" data-lightbox="test"><img src="{{ literature.image.url }}"></a>
-          </div>
-          {% endfor %}
+        <div class="carousel-item active">
+            <a data-fslightbox="gallery" href="{{ one.image.url }}"><img src="{{ one.image.url }}" class="d-block w-100 my_photo" alt="..."></a>
+        </div>
+        {% for literature in all %}
+            <div class="carousel-item">
+                <a data-fslightbox="gallery" href="{{ literature.image.url }}"><img src="{{ literature.image.url }}" class="d-block w-100 my_photo" alt="..."></a>
+            </div>
+        {% endfor %}
     {% else %}
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 1</div>
-                <img src="https://cdn-front.kwork.ru/files/portfolio/t3/53/31bfc4af5e899dcb2c005dc2a7ee6c253d0e2405-1585829453.jpg">
-          </div>
+            <div class="carousel-item active">
+                <img src="https://i01.fotocdn.net/s110/86e4b6197ffd562b/public_pin_l/2447627308.jpg" class="d-block w-100 my_photo" alt="...">
+            </div>
     {% endif %}
+
 {% endblock %}
 
-
-{% block circles %}
-    <div style="text-align:center">
-          {% for literature in abs_literature %}
-                <span class="dot" onclick="currentSlide({{ literature.title }})"></span>
-          {% endfor %}
-    </div>
+{% block slide %}
+    {% for i in col %}
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ i }}"
+                   class="active" aria-current="true" aria-label="Slide 1"></button>
+    {% endfor %}
 {% endblock %}

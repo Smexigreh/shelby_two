@@ -1,30 +1,30 @@
 {% extends "all_abs/base.html" %}
 
 {% block abs_title %}Обществознание{% endblock %}
-{% block info %}Конспект по Обществознанию{% endblock %}
-
+{% block abs_title_2 %}Обществознанию{% endblock %}
 
 {% block content %}
+
     {% if abs_social_studies %}
-          {% for social_studies in abs_social_studies %}
-          <div class="mySlides fade">
-            <div class="numbertext">{{ social_studies.title }} / {{ count }}</div>
-              <a href="{{ social_studies.image.url }}" data-lightbox="test"><img src="{{ social_studies.image.url }}"></a>
-          </div>
-          {% endfor %}
+        <div class="carousel-item active">
+            <a data-fslightbox="gallery" href="{{ one.image.url }}"><img src="{{ one.image.url }}" class="d-block w-100 my_photo" alt="..."></a>
+        </div>
+        {% for social_studies in all %}
+            <div class="carousel-item">
+                <a data-fslightbox="gallery" href="{{ social_studies.image.url }}"><img src="{{ social_studies.image.url }}" class="d-block w-100 my_photo" alt="..."></a>
+            </div>
+        {% endfor %}
     {% else %}
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 1</div>
-                <img src="https://cdn-front.kwork.ru/files/portfolio/t3/53/31bfc4af5e899dcb2c005dc2a7ee6c253d0e2405-1585829453.jpg">
-          </div>
+            <div class="carousel-item active">
+                <img src="https://i01.fotocdn.net/s110/86e4b6197ffd562b/public_pin_l/2447627308.jpg" class="d-block w-100 my_photo" alt="...">
+            </div>
     {% endif %}
+
 {% endblock %}
 
-
-{% block circles %}
-    <div style="text-align:center">
-          {% for social_studies in abs_social_studies %}
-                <span class="dot" onclick="currentSlide({{ social_studies.title }})"></span>
-          {% endfor %}
-    </div>
+{% block slide %}
+    {% for i in col %}
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ i }}"
+                   class="active" aria-current="true" aria-label="Slide 1"></button>
+    {% endfor %}
 {% endblock %}
